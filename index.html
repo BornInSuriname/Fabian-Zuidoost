@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fabian Vroom · BIJ1 Zuidoost</title>
+
+  <!-- Deelbaarheid / SEO -->
+  <meta name="description" content="Van tramcabine naar stadsdeelcommissie: resultaat in uitvoering. Fabian Vroom – BIJ1, Stadsdeelcommissie Amsterdam Zuidoost. Verkiezingen 18 maart 2026.">
+  <meta property="og:title" content="Fabian Vroom · BIJ1 Zuidoost">
+  <meta property="og:description" content="Resultaat in uitvoering. 3 concrete toezeggingen voor Zuidoost. Verkiezingen 18 maart 2026.">
+  <!-- Voeg zelf een echte URL en OG-image toe -->
+  <meta property="og:url" content="https://JOUW-DOMEIN.NL/">
+  <meta property="og:image" content="https://JOUW-DOMEIN.NL/og-image.jpg">
+  <meta name="theme-color" content="#FCE300">
+
+  <style>
+    :root{
+      --bg: #f5f3f0;
+      --paper: #ffffff;
+      --ink: #1e1e1e;
+      --muted: #4a4a4a;
+      --line: #eae7e2;
+      --card: #faf8f4;
+      --card2: #fbf9f5;
+      --accent: #FCE300;
+      --shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+      --radius-lg: 2rem;
+      --radius-md: 1.8rem;
+      --radius-sm: 1.5rem;
+      --pad-page: 2rem;
+      --maxw: 880px;
+    }
+
+    *{ margin:0; padding:0; box-sizing:border-box; }
+
+    body{
+      background: var(--bg);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      line-height: 1.6;
+      color: var(--ink);
+      padding: 2rem 1rem;
+    }
+
+    /* Skip link voor keyboard users */
+    .skip-link{
+      position:absolute;
+      left:-9999px;
+      top: 1rem;
+      background: var(--ink);
+      color: var(--accent);
+      padding: .6rem 1rem;
+      border-radius: 999px;
+      text-decoration:none;
+      z-index: 9999;
+    }
+    .skip-link:focus{ left: 1rem; }
+
+    .page{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      background: var(--paper);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      border: 1px solid var(--line);
+    }
+
+    header.header-stripe{
+      background: var(--accent);
+      padding: 1.2rem var(--pad-page) 0.9rem var(--pad-page);
+      border-bottom: 4px solid var(--ink);
+    }
+
+    header.header-stripe h1{
+      font-size: clamp(1.7rem, 2.6vw, 2rem);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 0.35rem;
+    }
+
+    .subhead{
+      font-size: 1.15rem;
+      font-weight: 550;
+      color: var(--ink);
+      border-left: 4px solid var(--ink);
+      padding-left: 1rem;
+      margin-top: 0.25rem;
+    }
+
+    .verkiezingsdatum{
+      display: inline-block;
+      background: var(--ink);
+      color: var(--accent);
+      font-weight: 650;
+      padding: 0.35rem 1rem;
+      border-radius: 40px;
+      margin-top: 0.9rem;
+      font-size: 0.95rem;
+      letter-spacing: 0.2px;
+    }
+
+    main.content{
+      padding: 2rem var(--pad-page) 2.5rem var(--pad-page);
+    }
+
+    section{ margin-bottom: 2.5rem; }
+
+    h2{
+      font-size: clamp(1.5rem, 2.3vw, 1.8rem);
+      font-weight: 750;
+      margin-bottom: 1.2rem;
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 0.4rem;
+      display: inline-block;
+    }
+
+    h3{
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin: 1.8rem 0 0.5rem 0;
+      color: var(--ink);
+    }
+
+    p{ margin-bottom: 1rem; }
+    p:last-child{ margin-bottom: 0; }
+
+    .plan-grid{
+      display:flex;
+      flex-direction:column;
+      gap: 1.8rem;
+      margin-top: 1.5rem;
+    }
+
+    .plan-item{
+      background: var(--card);
+      border-radius: var(--radius-md);
+      padding: 1.8rem;
+      border: 1px solid #e0dbd2;
+      transition: 0.2s;
+    }
+
+    .plan-item:hover{
+      border-color: var(--accent);
+      box-shadow: 0 4px 12px rgba(252, 227, 0, 0.2);
+    }
+
+    .plan-item h3{
+      font-size: 1.5rem;
+      font-weight: 750;
+      margin: 0 0 0.6rem 0;
+      display:flex;
+      align-items:center;
+      gap: 0.6rem;
+    }
+
+    .badge{
+      background: var(--ink);
+      color: var(--accent);
+      font-size: 1.05rem;
+      font-weight: 700;
+      width: 2rem;
+      height: 2rem;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius: 999px;
+      flex: 0 0 auto;
+    }
+
+    .plan-subhead{
+      font-style: italic;
+      font-weight: 520;
+      color: #2d2d2d;
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+      border-left: 3px solid var(--accent);
+      padding-left: 1rem;
+    }
+
+    .plan-detail{ margin: 1rem 0 0 1rem; }
+    .plan-detail p{ margin-bottom: 0.7rem; }
+
+    .plan-detail strong{
+      font-weight: 750;
+      color: var(--ink);
+      background: rgba(252, 227, 0, 0.55);
+      padding: 0.08rem 0.3rem;
+      border-radius: 6px;
+    }
+
+    .waarom{
+      background: var(--ink);
+      color: #fff;
+      padding: 2rem var(--pad-page) 1.8rem var(--pad-page);
+      border-radius: var(--radius-lg);
+      margin: 2.5rem 0 1.8rem 0;
+    }
+
+    .waarom h2{
+      border-bottom-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .waarom p{
+      font-size: 1.15rem;
+      margin-bottom: 1rem;
+      color: #f0f0f0;
+    }
+
+    .handtekening{
+      text-align: right;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 2px dashed #cbc8c0;
+      font-size: 1.45rem;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .handtekening .lijn{
+      font-size: 1.1rem;
+      font-weight: 450;
+      color: var(--muted);
+      margin-top: 0.2rem;
+    }
+
+    .pill{
+      background: var(--accent);
+      color: var(--ink);
+      padding: 0.2rem 0.8rem;
+      border-radius: 40px;
+      font-weight: 800;
+      display:inline-block;
+    }
+
+    /* CTA als echte knop-link */
+    .cta{
+      background: var(--accent);
+      color: var(--ink);
+      text-align:center;
+      padding: 1.2rem;
+      border-radius: 60px;
+      font-weight: 800;
+      font-size: 1.2rem;
+      margin: 1.5rem 0 0.5rem 0;
+      border: 2px solid var(--ink);
+      transition: 0.15s;
+    }
+
+    .cta a{
+      color: inherit;
+      text-decoration:none;
+      display:block;
+      outline: none;
+    }
+
+    .cta:hover{
+      background: var(--ink);
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    /* Focus state: zichtbaar voor keyboard */
+    a:focus-visible{
+      outline: 3px solid var(--ink);
+      outline-offset: 4px;
+      border-radius: 10px;
+    }
+
+    footer{
+      text-align:center;
+      font-size: 0.95rem;
+      color: #5a5a5a;
+      margin: 2rem 0 0.5rem 0;
+    }
+
+    @media (max-width: 600px){
+      main.content{ padding: 1.5rem; }
+      .plan-item h3{ font-size: 1.35rem; }
+      .handtekening{ font-size: 1.25rem; }
+      header.header-stripe{ padding-left: 1.5rem; padding-right: 1.5rem; }
+    }
+
+    @media print{
+      body{ background:#fff; padding:0; }
+      .page{ box-shadow:none; border: none; border-radius: 0; }
+      .cta{ border: 2px solid #000; }
+      /* Optioneel: CTA verbergen in print */
+      /* .cta{ display:none; } */
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#inhoud">Ga naar inhoud</a>
+
+  <div class="page">
+    <header class="header-stripe">
+      <h1>Van tramcabine naar stadsdeelcommissie:<br>resultaat in uitvoering</h1>
+      <div class="subhead">Fabian Vroom – BIJ1, Stadsdeelcommissie Zuidoost</div>
+      <div class="verkiezingsdatum">Verkiezingen 18 maart 2026</div>
+    </header>
+
+    <main id="inhoud" class="content">
+      <section class="basis" aria-labelledby="basis">
+        <h2 id="basis">De basis</h2>
+        <p><strong>Mijn naam is Fabian Vroom.</strong> Als trambestuurder bij GVB zie ik de stad door de ogen van reizigers. Ik zie waar het werkt en waar mensen vastlopen: op het perron, in de wijken, onderweg naar school, werk of zorg.</p>
+        <p>Binnen GVB zet ik die blik om in actie als voorzitter van het personeelsinitiatief <em>Keti Koti Verbindt</em>. Daar bouwen we aan historische kennis en sociale veiligheid op de werkvloer. Mijn principe is simpel: <strong>luisteren is de start, uitvoeren de norm.</strong></p>
+      </section>
+
+      <section class="kompas" aria-labelledby="kompas">
+        <h2 id="kompas">Mijn kompas</h2>
+        <p>Sinds mijn 23e woon ik in Zuidoost, na mijn komst vanuit Suriname. Ik weet ook hoe snel bestaanszekerheid kan wankelen. Door foute beslissingen en keuzes verloor ik in 2010 mijn woning.</p>
+        <p>Twee jaar sliep ik op de bank in de woonkamer van anderen. Daarna huurde ik zes jaar in onderhuur. Zonder zekerheid. Altijd met de vraag: <em>waar slaap ik volgende maand?</em></p>
+
+        <!-- FEITENCHECK: vul dit jaartal in na controle -->
+        <p>In <strong>[JAAR INVULLEN]</strong> kreeg ik weer een woning op mijn naam. Dat bracht rust. Het gaf ruimte. In 2023 werd ons zoontje geboren.</p>
+
+        <!-- TAAK: kies formulering passend bij publicatiedatum -->
+        <p>Als vader van een zoon van <strong>[2 / bijna 3 / 3]</strong> en actief basketballer zie ik de potentie van onze wijken, én de gaten in onze voorzieningen. Ik sta voor een stadsdeel waar kinderen veilig opgroeien, zich ontwikkelen en ook als volwassene kunnen blijven wonen. <strong>Thuis voelen is een recht.</strong></p>
+      </section>
+
+      <section aria-labelledby="plan">
+        <h2 id="plan">Mijn plan: 3 concrete toezeggingen</h2>
+
+        <div class="plan-grid">
+          <article class="plan-item">
+            <h3><span class="badge">1</span> Jongeren: fysieke ruimte en woonrecht</h3>
+            <div class="plan-subhead">Jongeren hebben recht op hun plek.</div>
+            <div class="plan-detail">
+              <p><strong>Sport:</strong> ik ga voor hoogwaardige, openbare sportplekken: veilig, goed verlicht tot 22:00 uur en 24/7 toegankelijk voor iedereen. Met duidelijk beheer in de wijk, zodat het schoon, heel en veilig blijft.</p>
+              <p><strong>Wonen:</strong> jongeren en starters uit Zuidoost moeten hier kunnen blijven. Ik zet maximale druk op bouwplannen in Zuidoost: reserveer ruimte voor minimaal 500 betaalbare woningen, met afspraken die bewoners uit Zuidoost echt helpen. <em>Een thuis is een recht.</em></p>
+            </div>
+          </article>
+
+          <article class="plan-item">
+            <h3><span class="badge">2</span> Buurthuizen: essentiële infrastructuur</h3>
+            <div class="plan-subhead">Buurthuizen zijn sociale infrastructuur, net zo noodzakelijk als wegen en verlichting. Huiswerkbegeleiding, sport en ontmoeting maken de wijk veiliger.</div>
+            <div class="plan-detail">
+              <p><strong>Status:</strong> definieer buurthuizen als basisvoorziening, met structurele financiering.</p>
+              <p><strong>Toegang:</strong> open tot 22:00 uur, 7 dagen per week.</p>
+              <p><strong>Inhoud:</strong> bewoners en lokale initiatieven bepalen de programmering. Wij borgen continuïteit.</p>
+            </div>
+          </article>
+
+          <article class="plan-item">
+            <h3><span class="badge">3</span> Zeggenschap: meetbaar resultaat</h3>
+            <div class="plan-subhead">Kansen mogen niet afhangen van je postcode.</div>
+            <div class="plan-detail">
+              <p><strong>Kwaliteit:</strong> ik wil meetbare normen voor onderhoud en veiligheid in de openbare ruimte. We sturen op data én op wat bewoners melden, met preventief onderhoud.</p>
+              <p><strong>Budget:</strong> een wijkbudget van €50.000 per jaar met mandaat. Bewoners beslissen zelfstandig over de besteding in hun eigen straat. Dit is eigenaarschap in de praktijk.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="waarom" aria-labelledby="waarom">
+        <h2 id="waarom">Waarom BIJ1?</h2>
+        <p>BIJ1 staat voor radicale gelijkwaardigheid. Wij handelen nu, hier, in Zuidoost. Kansen en veiligheid zijn een recht.</p>
+        <p>Ik kies voor politiek van de uitvoering. Dicht op de wijk. Met duidelijke keuzes.</p>
+      </section>
+
+      <div class="handtekening" aria-label="ondertekening">
+        <div>Stem voor resultaat.</div>
+        <div class="lijn">Fabian Vroom <span class="pill">#3</span> | Lijst BIJ1 | Amsterdam Zuidoost</div>
+      </div>
+
+      <div class="cta">
+        <!-- Zet hier je echte link neer -->
+        <a href="https://JOUW-LINK-HIER.NL/" aria-label="Stem 18 maart 2026 op Fabian Vroom nummer 3">✓ Stem 18 maart 2026 op Fabian Vroom #3</a>
+      </div>
+
+      <footer>‹ resultaat in uitvoering › · Zuidoost verdient actie</footer>
+    </main>
+  </div>
+</body>
+  </html>
