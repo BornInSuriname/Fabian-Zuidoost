@@ -8,6 +8,7 @@
   <!-- SEO -->
   <meta name="description" content="Van tramcabine naar stadsdeelcommissie: resultaat in uitvoering. Fabian Vroom – BIJ1, Stadsdeelcommissie Amsterdam Zuidoost. Verkiezingen 18 maart 2026.">
   <link rel="canonical" href="https://borninsuriname.github.io/Fabian-Zuidoost/">
+  <meta name="robots" content="index,follow">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -15,7 +16,8 @@
   <meta property="og:title" content="Fabian Vroom · BIJ1 Amsterdam Zuidoost">
   <meta property="og:description" content="Resultaat in uitvoering. Drie concrete toezeggingen voor Amsterdam Zuidoost. Verkiezingen 18 maart 2026.">
   <meta property="og:url" content="https://borninsuriname.github.io/Fabian-Zuidoost/">
-  <meta property="og:image" content="https://borninsuriname.github.io/Fabian-Zuidoost/assets/og-image.jpg">
+  <!-- Cache-buster: update v= wanneer je OG-image vervangt -->
+  <meta property="og:image" content="https://borninsuriname.github.io/Fabian-Zuidoost/assets/og-image.jpg?v=20260215">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Fabian Vroom · BIJ1 Amsterdam Zuidoost">
@@ -24,8 +26,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Fabian Vroom · BIJ1 Amsterdam Zuidoost">
   <meta name="twitter:description" content="Resultaat in uitvoering. Drie concrete toezeggingen voor Amsterdam Zuidoost. Verkiezingen 18 maart 2026.">
-  <meta name="twitter:image" content="https://borninsuriname.github.io/Fabian-Zuidoost/assets/og-image.jpg">
-  <meta name="twitter:image:alt" content="Fabian Vroom · BIJJ Amsterdam Zuidoost">
+  <meta name="twitter:image" content="https://borninsuriname.github.io/Fabian-Zuidoost/assets/og-image.jpg?v=20260215">
+  <meta name="twitter:image:alt" content="Fabian Vroom · BIJ1 Amsterdam Zuidoost">
 
   <meta name="theme-color" content="#FCE300">
   <meta name="color-scheme" content="light">
@@ -219,7 +221,6 @@
       box-shadow: 0 18px 38px rgba(0,0,0,.18);
     }
 
-    /* Placeholder is visible by default */
     .photo-placeholder{
       aspect-ratio: 1 / 1;
       display:flex;
@@ -235,7 +236,6 @@
         repeating-linear-gradient(135deg, rgba(0,0,0,.10) 0 2px, transparent 2px 10px);
     }
 
-    /* When you add an <img>, it will fill the frame */
     .photo-frame img{
       width: 100%;
       height: auto;
@@ -257,6 +257,11 @@
       margin-bottom: 2.2rem;
       max-width: var(--measure);
       scroll-margin-top: 1rem;
+    }
+
+    /* Wide sections for layout */
+    .wide{
+      max-width: 100%;
     }
 
     h2{
@@ -555,7 +560,7 @@
               2) Vervang de DIV hieronder door:
                  <img src="assets/portret.jpg" alt="Portret van Fabian Vroom" loading="eager">
             -->
-            <div class="photo-placeholder">PLAATS PORTRET<br>(1:1)</div>
+            <img src="assets/portret.jpg" alt="Portret van Fabian Vroom" loading="eager">
           </div>
           <div class="photo-note">Tip: vierkant portret werkt het best (1:1).</div>
         </aside>
@@ -570,24 +575,24 @@
       </section>
 
       <section class="kompas" aria-labelledby="kompas">
-  <h2 id="kompas">Mijn kompas</h2>
+        <h2 id="kompas">Mijn kompas</h2>
 
-  <p><strong>Bestaanszekerheid is geen theorie, het is ervaring.</strong></p>
+        <p><strong>Bestaanszekerheid is geen theorie, het is ervaring.</strong></p>
 
-  <h3>2010–2018: leven zonder zekerheid</h3>
-  <p>Sinds mijn 23e woon ik in Amsterdam Zuidoost, nadat ik met één koffer vanuit Suriname arriveerde. Ik weet hoe snel bestaanszekerheid kan wankelen. Door verkeerde keuzes raakte ik in 2010 mijn woning kwijt.</p>
+        <h3>2010–2018: leven zonder zekerheid</h3>
+        <p>Sinds mijn 23e woon ik in Amsterdam Zuidoost, nadat ik met één koffer vanuit Suriname arriveerde. Ik weet hoe snel bestaanszekerheid kan wankelen. Door verkeerde keuzes raakte ik in 2010 mijn woning kwijt.</p>
 
-  <p>Twee jaar lang sliep ik op banken in de woonkamer bij anderen. Daarna huurde ik zes jaar in onderhuur. Zonder zekerheid. Met telkens dezelfde vraag: <em>waar slaap ik volgende maand?</em></p>
+        <p>Twee jaar lang sliep ik op banken in de woonkamer bij anderen. Daarna huurde ik zes jaar in onderhuur. Zonder zekerheid. Met telkens dezelfde vraag: <em>waar slaap ik volgende maand?</em></p>
 
-  <p>Ik zag in die periode hoe oude Surinaamse vrienden drugs verkochten in het centrum van Amsterdam. Ik voelde hoe dun die lijn is en besefte hoe makkelijk ik zelf een verkeerde afslag had kunnen nemen. Toch bleef ik vechten: ik klopte aan bij uitzendbureaus en pakte het werk dat ik kon vinden.</p>
+        <p>Ik zag in die periode hoe oude Surinaamse vrienden drugs verkochten in het centrum van Amsterdam. Ik voelde hoe dun die lijn is en besefte hoe makkelijk ik zelf een verkeerde afslag had kunnen nemen. Toch bleef ik vechten: ik klopte aan bij uitzendbureaus en pakte het werk dat ik kon vinden.</p>
 
-  <h3>Waarom politiek: zekerheid, kansen, zeggenschap</h3>
-  <p>In 2018 kreeg ik weer een woning op mijn naam. Dat gaf rust en ruimte. In 2023 werd ons zoontje geboren. Als vader zie ik de potentie van onze wijken én de gaten in onze voorzieningen.</p>
+        <h3>Waarom politiek: zekerheid, kansen, zeggenschap</h3>
+        <p>In 2018 kreeg ik weer een woning op mijn naam. Dat gaf rust en ruimte. In 2023 werd ons zoontje geboren. Als vader zie ik de potentie van onze wijken én de gaten in onze voorzieningen.</p>
 
-  <p>Mijn eigen geschiedenis heeft mij geleerd hoe belangrijk zekerheid, kansen en steun zijn. Daarom ga ik de politiek in vanuit noodzaak: voor echte bestaanszekerheid, perspectief voor jongeren, meer zeggenschap voor bewoners en buurten die veilig zijn, met vertrouwen als basis.</p>
-</section>
+        <p>Mijn eigen geschiedenis heeft mij geleerd hoe belangrijk zekerheid, kansen en steun zijn. Daarom ga ik de politiek in vanuit noodzaak: voor echte bestaanszekerheid, perspectief voor jongeren, meer zeggenschap voor bewoners en buurten die veilig zijn, met vertrouwen als basis.</p>
+      </section>
 
-      <section aria-labelledby="plan">
+      <section class="wide" aria-labelledby="plan">
         <h2 id="plan">Mijn plan: drie concrete toezeggingen</h2>
 
         <div class="plan-grid">
@@ -644,4 +649,4 @@
     </div>
   </div>
 </body>
-</html>
+  </html>
