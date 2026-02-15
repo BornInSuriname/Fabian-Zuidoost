@@ -25,7 +25,7 @@
   <meta name="twitter:title" content="Fabian Vroom · BIJ1 Amsterdam Zuidoost">
   <meta name="twitter:description" content="Resultaat in uitvoering. Drie concrete toezeggingen voor Amsterdam Zuidoost. Verkiezingen 18 maart 2026.">
   <meta name="twitter:image" content="https://borninsuriname.github.io/Fabian-Zuidoost/assets/og-image.jpg">
-  <meta name="twitter:image:alt" content="Fabian Vroom · BIJ1 Amsterdam Zuidoost">
+  <meta name="twitter:image:alt" content="Fabian Vroom · BIJJ Amsterdam Zuidoost">
 
   <meta name="theme-color" content="#FCE300">
   <meta name="color-scheme" content="light">
@@ -48,8 +48,8 @@
       --radius-lg: 1.75rem;
       --radius-md: 1.25rem;
 
-      --maxw: 940px;
-      --pad: clamp(1.1rem, 3vw, 2.1rem);
+      --maxw: 980px;
+      --pad: clamp(1.1rem, 3vw, 2.2rem);
       --measure: 72ch;
     }
 
@@ -111,12 +111,21 @@
       pointer-events:none;
     }
 
-    .kicker{
+    /* HERO GRID */
+    .hero-grid{
       position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap: clamp(1rem, 2.2vw, 1.6rem);
+      align-items: start;
+    }
+
+    .kicker{
       display:inline-flex;
       align-items:center;
       gap:.5rem;
-      font-weight: 900;
+      font-weight: 950;
       letter-spacing: .2px;
       color: var(--ink);
       background: rgba(255,255,255,.40);
@@ -128,8 +137,7 @@
     }
 
     header.header-stripe h1{
-      position: relative;
-      font-size: clamp(1.95rem, 3.3vw, 2.45rem);
+      font-size: clamp(1.95rem, 3.3vw, 2.55rem);
       font-weight: 950;
       line-height: 1.08;
       letter-spacing: -0.02em;
@@ -138,33 +146,42 @@
     }
 
     .subhead{
-      position: relative;
       font-size: 1.05rem;
-      font-weight: 800;
+      font-weight: 850;
       color: var(--ink);
       border-left: 5px solid var(--ink);
       padding-left: 1rem;
       max-width: 70ch;
     }
 
-    .verkiezingsdatum{
-      position: relative;
-      display: inline-flex;
-      gap: .55rem;
+    .meta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.55rem;
+      margin-top: .9rem;
+    }
+
+    .tag{
+      display:inline-flex;
       align-items:center;
+      justify-content:center;
+      padding: .38rem .85rem;
+      border-radius: 999px;
+      font-weight: 950;
+      border: 2px solid rgba(0,0,0,.18);
+      background: rgba(255,255,255,.55);
+      color: var(--ink);
+      font-size: .95rem;
+      letter-spacing: .2px;
+    }
+
+    .tag.dark{
       background: var(--ink);
       color: var(--accent);
-      font-weight: 950;
-      padding: .45rem 1rem;
-      border-radius: 999px;
-      margin-top: 1rem;
-      font-size: .98rem;
-      letter-spacing: .2px;
-      border: 2px solid rgba(255,255,255,.18);
+      border-color: rgba(255,255,255,.15);
     }
 
     nav.toc{
-      position: relative;
       margin-top: 1rem;
       display:flex;
       flex-wrap:wrap;
@@ -177,7 +194,7 @@
       border: 1px solid rgba(0,0,0,.20);
       padding: .45rem .75rem;
       border-radius: 999px;
-      font-weight: 900;
+      font-weight: 950;
       font-size: .95rem;
       transition: transform .12s ease, background .12s ease, border-color .12s ease;
     }
@@ -185,6 +202,51 @@
       transform: translateY(-1px);
       background: rgba(255,255,255,.78);
       border-color: rgba(0,0,0,.35);
+    }
+
+    /* PHOTO SLOT */
+    .hero-photo{
+      position: sticky;
+      top: 12px;
+      align-self: start;
+    }
+
+    .photo-frame{
+      border-radius: 1.35rem;
+      border: 3px solid rgba(0,0,0,.20);
+      background: rgba(255,255,255,.55);
+      overflow: hidden;
+      box-shadow: 0 18px 38px rgba(0,0,0,.18);
+    }
+
+    /* Placeholder is visible by default */
+    .photo-placeholder{
+      aspect-ratio: 1 / 1;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding: 1rem;
+      font-weight: 950;
+      letter-spacing: .2px;
+      color: rgba(0,0,0,.72);
+      background:
+        radial-gradient(600px 300px at 20% 20%, rgba(255,255,255,.75), transparent 55%),
+        repeating-linear-gradient(135deg, rgba(0,0,0,.10) 0 2px, transparent 2px 10px);
+    }
+
+    /* When you add an <img>, it will fill the frame */
+    .photo-frame img{
+      width: 100%;
+      height: auto;
+      display:block;
+    }
+
+    .photo-note{
+      margin-top: .6rem;
+      font-size: .95rem;
+      font-weight: 800;
+      color: rgba(0,0,0,.72);
     }
 
     main.content{
@@ -226,7 +288,6 @@
       border-radius: 6px;
     }
 
-    /* Plan cards */
     .plan-grid{
       display:flex;
       flex-direction:column;
@@ -238,7 +299,7 @@
     .plan-item{
       background: var(--card);
       border-radius: var(--radius-md);
-      padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+      padding: 1.25rem;
       border: 1px solid var(--card-border);
       box-shadow: var(--shadow-soft);
       position: relative;
@@ -254,11 +315,6 @@
       width: 10px;
       background: var(--accent);
       border-right: 1px solid rgba(0,0,0,.10);
-    }
-
-    .plan-item:hover{
-      transform: translateY(-1px);
-      transition: transform .12s ease;
     }
 
     .plan-item h3{
@@ -297,7 +353,6 @@
       padding-left: .9rem;
     }
 
-    .plan-detail{ margin: 0; padding-left: 0; }
     .plan-detail p{ margin-bottom: .75rem; }
     .plan-detail strong{
       font-weight: 950;
@@ -306,7 +361,6 @@
       border-radius: 6px;
     }
 
-    /* Waarom block */
     .waarom{
       background: var(--ink);
       color: #fff;
@@ -328,7 +382,6 @@
       color: rgba(255,255,255,.92);
     }
 
-    /* Signature */
     .handtekening{
       text-align: right;
       margin-top: 1.8rem;
@@ -357,7 +410,6 @@
       border: 2px solid rgba(0,0,0,.15);
     }
 
-    /* CTA */
     .cta{
       display:block;
       background: var(--accent);
@@ -380,7 +432,6 @@
       transform: translateY(-1px);
     }
 
-    /* Focus */
     a:focus-visible{
       outline: 3px solid var(--ink);
       outline-offset: 4px;
@@ -394,7 +445,7 @@
       margin: 2rem 0 0.5rem 0;
     }
 
-    /* Sticky CTA (mobile only) */
+    /* Sticky CTA (mobile) */
     .sticky-cta{
       display:none;
       position: fixed;
@@ -434,21 +485,26 @@
       .sticky-cta__inner{ backdrop-filter: blur(10px); }
     }
 
+    @media (max-width: 860px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      .hero-photo{ position: relative; top: 0; }
+      .photo-note{ margin-bottom: .25rem; }
+    }
+
     @media (max-width: 640px){
       main.content{ padding: 1.35rem; }
       header.header-stripe{ padding: 1.35rem; }
       .subhead{ font-size: 1rem; }
       .plan-item{ padding: 1.15rem; }
       .plan-item h3{ font-size: 1.22rem; }
-
       .sticky-cta{ display:block; }
       body{ padding-bottom: 96px; }
     }
 
     @media (prefers-reduced-motion: reduce){
       html{ scroll-behavior: auto; }
-      nav.toc a, .plan-item, .cta{ transition: none; }
-      nav.toc a:hover, .plan-item:hover, .cta:hover{ transform: none; }
+      nav.toc a, .cta{ transition: none; }
+      nav.toc a:hover, .cta:hover{ transform: none; }
     }
 
     @media print{
@@ -457,6 +513,7 @@
       .cta{ border: 2px solid #000; box-shadow:none; }
       .sticky-cta{ display:none; }
       nav.toc{ display:none; }
+      .hero-photo{ display:none; }
     }
   </style>
 </head>
@@ -466,20 +523,43 @@
 
   <div class="page">
     <header class="header-stripe">
-      <div class="kicker">Politiek die je kunt controleren</div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="kicker">Politiek die je kunt controleren</div>
 
-      <h1>Van tramcabine naar stadsdeelcommissie:<br>resultaat in uitvoering</h1>
+          <h1>Van tramcabine naar stadsdeelcommissie:<br>resultaat in uitvoering</h1>
 
-      <div class="subhead">Fabian Vroom – BIJ1, Kandidaat Stadsdeelcommissie Amsterdam Zuidoost</div>
-      <div class="verkiezingsdatum">Verkiezingen 18 maart 2026</div>
+          <div class="subhead">Fabian Vroom – BIJ1, Kandidaat Stadsdeelcommissie Amsterdam Zuidoost</div>
 
-      <nav class="toc" aria-label="Snel naar">
-        <a href="#basis">De basis</a>
-        <a href="#kompas">Mijn kompas</a>
-        <a href="#plan">Mijn plan</a>
-        <a href="#waarom">Waarom BIJ1</a>
-        <a href="#afsluiter">Afsluiter</a>
-      </nav>
+          <div class="meta-row" aria-label="meta">
+            <span class="tag dark">Verkiezingen 18 maart 2026</span>
+            <span class="tag">Zuidoost</span>
+            <span class="tag">#3</span>
+            <span class="tag">BIJ1</span>
+          </div>
+
+          <nav class="toc" aria-label="Snel naar">
+            <a href="#basis">De basis</a>
+            <a href="#kompas">Mijn kompas</a>
+            <a href="#plan">Mijn plan</a>
+            <a href="#waarom">Waarom BIJ1</a>
+            <a href="#afsluiter">Afsluiter</a>
+          </nav>
+        </div>
+
+        <aside class="hero-photo" aria-label="Portret">
+          <div class="photo-frame">
+            <!--
+              FOTO PLAATSEN:
+              1) Upload jouw portret naar /assets/ (bijv. assets/portret.jpg)
+              2) Vervang de DIV hieronder door:
+                 <img src="assets/portret.jpg" alt="Portret van Fabian Vroom" loading="eager">
+            -->
+            <div class="photo-placeholder">PLAATS PORTRET<br>(1:1)</div>
+          </div>
+          <div class="photo-note">Tip: vierkant portret werkt het best (1:1).</div>
+        </aside>
+      </div>
     </header>
 
     <main id="inhoud" class="content">
@@ -490,12 +570,22 @@
       </section>
 
       <section class="kompas" aria-labelledby="kompas">
-        <h2 id="kompas">Mijn kompas</h2>
-        <p>Sinds mijn 23e woon ik in Amsterdam Zuidoost, na mijn komst vanuit Suriname. Ik weet ook hoe snel bestaanszekerheid kan wankelen. Door foute beslissingen en keuzes verloor ik in 2010 mijn woning.</p>
-        <p>Twee jaar sliep ik op de bank in de woonkamer van anderen. Daarna huurde ik zes jaar in onderhuur. Zonder zekerheid. Altijd met de vraag: <em>waar slaap ik volgende maand?</em></p>
-        <p>In <strong>2018</strong> kreeg ik weer een woning op mijn naam. Dat bracht rust. Het gaf ruimte. In 2023 werd ons zoontje geboren.</p>
-        <p>Als vader en actief basketballer zie ik de potentie van onze wijken, én de gaten in onze voorzieningen. Ik sta voor een stadsdeel waar kinderen veilig opgroeien, zich ontwikkelen en ook als volwassene kunnen blijven wonen. <strong>Thuis voelen is een recht.</strong></p>
-      </section>
+  <h2 id="kompas">Mijn kompas</h2>
+
+  <p><strong>Bestaanszekerheid is geen theorie, het is ervaring.</strong></p>
+
+  <h3>2010–2018: leven zonder zekerheid</h3>
+  <p>Sinds mijn 23e woon ik in Amsterdam Zuidoost, nadat ik met één koffer vanuit Suriname arriveerde. Ik weet hoe snel bestaanszekerheid kan wankelen. Door verkeerde keuzes raakte ik in 2010 mijn woning kwijt.</p>
+
+  <p>Twee jaar lang sliep ik op banken in de woonkamer bij anderen. Daarna huurde ik zes jaar in onderhuur. Zonder zekerheid. Met telkens dezelfde vraag: <em>waar slaap ik volgende maand?</em></p>
+
+  <p>Ik zag in die periode hoe oude Surinaamse vrienden drugs verkochten in het centrum van Amsterdam. Ik voelde hoe dun die lijn is en besefte hoe makkelijk ik zelf een verkeerde afslag had kunnen nemen. Toch bleef ik vechten: ik klopte aan bij uitzendbureaus en pakte het werk dat ik kon vinden.</p>
+
+  <h3>Waarom politiek: zekerheid, kansen, zeggenschap</h3>
+  <p>In 2018 kreeg ik weer een woning op mijn naam. Dat gaf rust en ruimte. In 2023 werd ons zoontje geboren. Als vader zie ik de potentie van onze wijken én de gaten in onze voorzieningen.</p>
+
+  <p>Mijn eigen geschiedenis heeft mij geleerd hoe belangrijk zekerheid, kansen en steun zijn. Daarom ga ik de politiek in vanuit noodzaak: voor echte bestaanszekerheid, perspectief voor jongeren, meer zeggenschap voor bewoners en buurten die veilig zijn, met vertrouwen als basis.</p>
+</section>
 
       <section aria-labelledby="plan">
         <h2 id="plan">Mijn plan: drie concrete toezeggingen</h2>
@@ -548,7 +638,6 @@
     </main>
   </div>
 
-  <!-- Sticky CTA for mobile -->
   <div class="sticky-cta" aria-label="Contact">
     <div class="sticky-cta__inner">
       <a class="sticky-cta__btn" href="https://wa.me/31619299232?text=Hoi%20Fabian,%20ik%20zag%20je%20pagina%20en%20heb%20een%20vraag%20over%20Amsterdam%20Zuidoost.">✓ Stel je vraag via WhatsApp</a>
