@@ -1,657 +1,506 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fabian Vroom · BIJ1 Amsterdam Zuidoost</title>
-
-  <!-- SEO -->
-  <meta name="description" content="Van tramcabine naar stadsdeelcommissie: resultaat in uitvoering. Fabian Vroom – BIJ1, Stadsdeelcommissie Amsterdam Zuidoost. Verkiezingen 18 maart 2026.">
-  <link rel="canonical" href="https://borninsuriname.github.io/Fabian-Zuidoost/">
-  <meta name="robots" content="index,follow">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="nl_NL">
-  <meta property="og:title" content="Fabian Vroom · BIJ1 Amsterdam Zuidoost">
-  <meta property="og:description" content="Resultaat in uitvoering. Drie concrete toezeggingen voor Amsterdam Zuidoost. Verkiezingen 18 maart 2026.">
-  <meta property="og:url" content="https://borninsuriname.github.io/Fabian-Zuidoost/">
-
-  <!-- Cache-buster: update v= wanneer je OG-image vervangt -->
-  <meta property="og:image" content="https://borninsuriname.github.io/Fabian-Zuidoost/assets/og-image.jpg?v=20260215">
-  <meta property="og:image:type" content="image/jpeg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Fabian Vroom · BIJ1 Amsterdam Zuidoost">
-
-  <!-- Twitter Cards -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Fabian Vroom · BIJ1 Amsterdam Zuidoost">
-  <meta name="twitter:description" content="Resultaat in uitvoering. Drie concrete toezeggingen voor Amsterdam Zuidoost. Verkiezingen 18 maart 2026.">
-  <meta name="twitter:image" content="https://borninsuriname.github.io/Fabian-Zuidoost/assets/og-image.jpg?v=20260215">
-  <meta name="twitter:image:alt" content="Fabian Vroom · BIJ1 Amsterdam Zuidoost">
-
-  <meta name="theme-color" content="#FCE300">
-  <meta name="color-scheme" content="light">
-
-  <style>
-    :root{
-      --bg: #f5f3f0;
-      --paper: #ffffff;
-      --ink: #121212;
-      --muted: #454545;
-      --line: #e7e2db;
-
-      --accent: #FCE300;
-      --card: #fbfaf7;
-      --card-border: #e2ddd4;
-
-      --shadow: 0 18px 50px rgba(0,0,0,.10);
-      --shadow-soft: 0 10px 26px rgba(0,0,0,.08);
-
-      --radius-lg: 1.75rem;
-      --radius-md: 1.25rem;
-
-      --maxw: 980px;
-      --pad: clamp(1.1rem, 3vw, 2.2rem);
-      --measure: 72ch;
-    }
-
-    *{ margin:0; padding:0; box-sizing:border-box; }
-    html{ scroll-behavior: smooth; }
-
-    body{
-      background:
-        radial-gradient(1200px 700px at 15% 10%, rgba(252, 227, 0, .18), transparent 55%),
-        radial-gradient(900px 600px at 85% 25%, rgba(0, 0, 0, .06), transparent 50%),
-        var(--bg);
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.7;
-      color: var(--ink);
-      padding: clamp(1rem, 3vw, 2rem) 1rem;
-      text-rendering: optimizeLegibility;
-    }
-
-    /* Skip link */
-    .skip-link{
-      position:absolute;
-      left:-9999px;
-      top: 1rem;
-      background: var(--ink);
-      color: var(--accent);
-      padding: .7rem 1rem;
-      border-radius: 999px;
-      text-decoration:none;
-      z-index: 9999;
-      border: 2px solid rgba(252,227,0,.35);
-    }
-    .skip-link:focus{ left: 1rem; }
-
-    .page{
-      max-width: var(--maxw);
-      margin: 0 auto;
-      background: var(--paper);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      border: 1px solid var(--line);
-    }
-
-    header.header-stripe{
-      background: var(--accent);
-      padding: var(--pad);
-      border-bottom: 4px solid var(--ink);
-      position: relative;
-    }
-
-    header.header-stripe::after{
-      content:"";
-      position:absolute;
-      inset: 0;
-      background:
-        linear-gradient(transparent, rgba(255,255,255,.10)),
-        repeating-linear-gradient(135deg, rgba(0,0,0,.06) 0 2px, transparent 2px 7px);
-      opacity: .10;
-      pointer-events:none;
-    }
-
-    /* HERO GRID */
-    .hero-grid{
-      position: relative;
-      z-index: 1;
-      display: grid;
-      grid-template-columns: 1.35fr .65fr;
-      gap: clamp(1rem, 2.2vw, 1.6rem);
-      align-items: start;
-    }
-
-    .kicker{
-      display:inline-flex;
-      align-items:center;
-      gap:.5rem;
-      font-weight: 950;
-      letter-spacing: .2px;
-      color: var(--ink);
-      background: rgba(255,255,255,.40);
-      width: fit-content;
-      padding: .38rem .8rem;
-      border-radius: 999px;
-      border: 1px solid rgba(0,0,0,.18);
-      margin-bottom: .75rem;
-    }
-
-    header.header-stripe h1{
-      font-size: clamp(1.95rem, 3.3vw, 2.55rem);
-      font-weight: 950;
-      line-height: 1.08;
-      letter-spacing: -0.02em;
-      color: var(--ink);
-      margin-bottom: .55rem;
-    }
-
-    .subhead{
-      font-size: 1.05rem;
-      font-weight: 850;
-      color: var(--ink);
-      border-left: 5px solid var(--ink);
-      padding-left: 1rem;
-      max-width: 70ch;
-    }
-
-    .meta-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:.55rem;
-      margin-top: .9rem;
-    }
-
-    .tag{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding: .38rem .85rem;
-      border-radius: 999px;
-      font-weight: 950;
-      border: 2px solid rgba(0,0,0,.18);
-      background: rgba(255,255,255,.55);
-      color: var(--ink);
-      font-size: .95rem;
-      letter-spacing: .2px;
-    }
-
-    .tag.dark{
-      background: var(--ink);
-      color: var(--accent);
-      border-color: rgba(255,255,255,.15);
-    }
-
-    nav.toc{
-      margin-top: 1rem;
-      display:flex;
-      flex-wrap:wrap;
-      gap: .55rem;
-    }
-    nav.toc a{
-      text-decoration:none;
-      color: var(--ink);
-      background: rgba(255,255,255,.60);
-      border: 1px solid rgba(0,0,0,.20);
-      padding: .45rem .75rem;
-      border-radius: 999px;
-      font-weight: 950;
-      font-size: .95rem;
-      transition: transform .12s ease, background .12s ease, border-color .12s ease;
-    }
-    nav.toc a:hover{
-      transform: translateY(-1px);
-      background: rgba(255,255,255,.78);
-      border-color: rgba(0,0,0,.35);
-    }
-
-    /* PHOTO SLOT */
-    .hero-photo{
-      position: sticky;
-      top: 12px;
-      align-self: start;
-    }
-
-    .photo-frame{
-      border-radius: 1.35rem;
-      border: 3px solid rgba(0,0,0,.20);
-      background: rgba(255,255,255,.55);
-      overflow: hidden;
-      box-shadow: 0 18px 38px rgba(0,0,0,.18);
-
-      /* Upgrade: forceer echt 1:1 frame */
-      aspect-ratio: 1 / 1;
-    }
-
-    .photo-placeholder{
-      width: 100%;
-      height: 100%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding: 1rem;
-      font-weight: 950;
-      letter-spacing: .2px;
-      color: rgba(0,0,0,.72);
-      background:
-        radial-gradient(600px 300px at 20% 20%, rgba(255,255,255,.75), transparent 55%),
-        repeating-linear-gradient(135deg, rgba(0,0,0,.10) 0 2px, transparent 2px 10px);
-    }
-
-    .photo-frame img{
-      /* Upgrade: fill + crop */
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 50% 30%;
-      display:block;
-    }
-
-    .photo-note{
-      margin-top: .6rem;
-      font-size: .95rem;
-      font-weight: 800;
-      color: rgba(0,0,0,.72);
-    }
-
-    main.content{
-      padding: calc(var(--pad) + .2rem) var(--pad) calc(var(--pad) + 1.2rem) var(--pad);
-    }
-
-    section{
-      margin-bottom: 2.2rem;
-      max-width: var(--measure);
-      scroll-margin-top: 1rem;
-    }
-
-    .wide{ max-width: 100%; }
-
-    h2{
-      font-size: clamp(1.45rem, 2.6vw, 1.9rem);
-      font-weight: 950;
-      margin-bottom: 1rem;
-      display: inline-block;
-      padding-bottom: .35rem;
-      border-bottom: 4px solid var(--accent);
-      letter-spacing: -0.01em;
-    }
-
-    h3{
-      font-size: 1.15rem;
-      font-weight: 950;
-      margin: 1.15rem 0 .5rem 0;
-      color: var(--ink);
-      letter-spacing: -0.01em;
-    }
-
-    p{
-      margin-bottom: 1rem;
-      color: #191919;
-    }
-
-    p strong{
-      background: rgba(252,227,0,.55);
-      padding: 0.06rem 0.3rem;
-      border-radius: 6px;
-    }
-
-    .plan-grid{
-      display:flex;
-      flex-direction:column;
-      gap: 1rem;
-      margin-top: 1.2rem;
-      max-width: 100%;
-    }
-
-    .plan-item{
-      background: var(--card);
-      border-radius: var(--radius-md);
-      padding: 1.25rem;
-      border: 1px solid var(--card-border);
-      box-shadow: var(--shadow-soft);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .plan-item::before{
-      content:"";
-      position:absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 10px;
-      background: var(--accent);
-      border-right: 1px solid rgba(0,0,0,.10);
-    }
-
-    .plan-item h3{
-      margin: 0 0 .6rem 0;
-      display:flex;
-      align-items:flex-start;
-      gap: .75rem;
-      font-size: 1.32rem;
-      line-height: 1.2;
-    }
-
-    .badge{
-      background: var(--ink);
-      color: var(--accent);
-      font-size: 1.02rem;
-      font-weight: 950;
-      width: 2.2rem;
-      height: 2.2rem;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      border-radius: 999px;
-      flex: 0 0 auto;
-      border: 2px solid rgba(252,227,0,.45);
-      box-shadow: 0 8px 18px rgba(0,0,0,.12);
-      margin-top: .05rem;
-    }
-
-    .plan-subhead{
-      font-style: italic;
-      font-weight: 800;
-      color: #2a2a2a;
-      margin-bottom: .9rem;
-      font-size: 1.02rem;
-      border-left: 4px solid var(--accent);
-      padding-left: .9rem;
-    }
-
-    .plan-detail p{ margin-bottom: .75rem; }
-    .plan-detail strong{
-      font-weight: 950;
-      background: rgba(252,227,0,.55);
-      padding: 0.06rem 0.3rem;
-      border-radius: 6px;
-    }
-
-    .waarom{
-      background: var(--ink);
-      color: #fff;
-      padding: 1.8rem var(--pad);
-      border-radius: var(--radius-lg);
-      margin: 2.2rem 0 1.4rem 0;
-      border: 1px solid rgba(255,255,255,.10);
-      max-width: 100%;
-    }
-
-    .waarom h2{
-      border-bottom-color: var(--accent);
-      color: var(--accent);
-    }
-
-    .waarom p{
-      font-size: 1.08rem;
-      margin-bottom: 1rem;
-      color: rgba(255,255,255,.92);
-    }
-
-    .handtekening{
-      text-align: right;
-      margin-top: 1.8rem;
-      padding-top: 1.2rem;
-      border-top: 2px dashed #cbc8c0;
-      font-size: clamp(1.15rem, 2.4vw, 1.45rem);
-      font-weight: 950;
-      line-height: 1.35;
-      max-width: 100%;
-    }
-
-    .handtekening .lijn{
-      font-size: 1.02rem;
-      font-weight: 800;
-      color: var(--muted);
-      margin-top: .25rem;
-    }
-
-    .pill{
-      background: var(--accent);
-      color: var(--ink);
-      padding: 0.22rem 0.75rem;
-      border-radius: 999px;
-      font-weight: 950;
-      display:inline-block;
-      border: 2px solid rgba(0,0,0,.15);
-    }
-
-    .cta{
-      display:block;
-      background: var(--accent);
-      color: var(--ink);
-      text-align:center;
-      padding: 1.05rem 1.1rem;
-      border-radius: 999px;
-      font-weight: 950;
-      font-size: 1.12rem;
-      margin: 1.25rem 0 .5rem 0;
-      border: 2px solid var(--ink);
-      box-shadow: 0 14px 26px rgba(0,0,0,.14);
-      text-decoration:none;
-      transition: transform .12s ease, background .12s ease, color .12s ease;
-    }
-
-    .cta:hover{
-      background: var(--ink);
-      color: var(--accent);
-      transform: translateY(-1px);
-    }
-
-    a:focus-visible{
-      outline: 3px solid var(--ink);
-      outline-offset: 4px;
-      border-radius: 14px;
-    }
-
-    footer{
-      text-align:center;
-      font-size: .95rem;
-      color: #5a5a5a;
-      margin: 2rem 0 0.5rem 0;
-    }
-
-    /* Sticky CTA (mobile) */
-    .sticky-cta{
-      display:none;
-      position: fixed;
-      left: 0;
-      right: 0;
-
-      /* Upgrade: safe-area */
-      bottom: calc(12px + env(safe-area-inset-bottom, 0px));
-
-      z-index: 999;
-      padding: 0 12px;
-      pointer-events: none;
-    }
-
-    .sticky-cta__inner{
-      max-width: var(--maxw);
-      margin: 0 auto;
-      pointer-events: auto;
-      background: rgba(255,255,255,.78);
-      border: 1px solid rgba(0,0,0,.14);
-      border-radius: 999px;
-      box-shadow: 0 18px 40px rgba(0,0,0,.18);
-      padding: 8px;
-    }
-
-    .sticky-cta__btn{
-      display:block;
-      text-align:center;
-      background: var(--accent);
-      color: var(--ink);
-      border: 2px solid var(--ink);
-      border-radius: 999px;
-      padding: .95rem 1rem;
-      font-weight: 950;
-      text-decoration:none;
-      line-height: 1;
-    }
-
-    @supports (backdrop-filter: blur(10px)){
-      .sticky-cta__inner{ backdrop-filter: blur(10px); }
-    }
-
-    @media (max-width: 860px){
-      .hero-grid{ grid-template-columns: 1fr; }
-      .hero-photo{ position: relative; top: 0; }
-      .photo-note{ margin-bottom: .25rem; }
-    }
-
-    @media (max-width: 640px){
-      main.content{ padding: 1.35rem; }
-      header.header-stripe{ padding: 1.35rem; }
-      .subhead{ font-size: 1rem; }
-      .plan-item{ padding: 1.15rem; }
-      .plan-item h3{ font-size: 1.22rem; }
-      .sticky-cta{ display:block; }
-
-      /* Upgrade: meer ruimte onderin zodat sticky CTA nooit content bedekt */
-      body{ padding-bottom: 120px; }
-    }
-
-    @media (prefers-reduced-motion: reduce){
-      html{ scroll-behavior: auto; }
-      nav.toc a, .cta{ transition: none; }
-      nav.toc a:hover, .cta:hover{ transform: none; }
-    }
-
-    @media print{
-      body{ background:#fff; padding:0; }
-      .page{ box-shadow:none; border: none; border-radius: 0; }
-      .cta{ border: 2px solid #000; box-shadow:none; }
-      .sticky-cta{ display:none; }
-      nav.toc{ display:none; }
-      .hero-photo{ display:none; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Meta Tags -->
+    <title>Fabian Vroom | BIJ1 Amsterdam Zuidoost #3</title>
+    <meta name="description" content="Fabian Vroom, kandidaat Stadsdeelcommissie Amsterdam Zuidoost (#3) en Gemeenteraad (#12). Gelijke stad, gelijke standaard. Stem voor uitvoering.">
+    
+    <!-- Social Media Preview (Open Graph) -->
+    <meta property="og:title" content="Fabian Vroom | BIJ1 Zuidoost #3">
+    <meta property="og:description" content="Gelijke stad, gelijke standaard. Bekijk mijn plannen voor Zuidoost.">
+    <!-- Let op: zorg dat je de gegenereerde OG-image uploadt als 'og-image.png' in de assets map -->
+    <meta property="og:image" content="./assets/og-image.png">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bij1: {
+                            yellow: '#FCE116', 
+                            black: '#000000',
+                            dark: '#1a1a1a',
+                            light: '#f5f5f5'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Aangepaste clip-path die minder agressief is op mobiel */
+        .clip-diagonal {
+            clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+        }
+        @media (min-width: 768px) {
+            .clip-diagonal {
+                clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            }
+        }
+        
+        #mobile-menu {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        #mobile-menu.active {
+            max-height: 400px;
+            opacity: 1;
+        }
+    </style>
 </head>
+<body class="bg-white text-bij1-black font-sans antialiased">
 
-<body>
-  <a class="skip-link" href="#inhoud">Ga naar inhoud</a>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-bij1-black text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <span class="font-black text-2xl tracking-tighter uppercase text-bij1-yellow">BIJ1</span>
+                    <span class="font-bold text-xl tracking-tight border-l-2 border-gray-600 pl-3">Fabian Vroom</span>
+                </div>
 
-  <div class="page">
-    <header class="header-stripe">
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <div class="kicker">Politiek die je kunt controleren</div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="hover:text-bij1-yellow transition-colors font-medium">Home</a>
+                    <a href="#pijlers" class="hover:text-bij1-yellow transition-colors font-medium">Standpunten</a>
+                    <a href="#steminfo" class="bg-bij1-yellow text-bij1-black px-4 py-2 rounded font-bold hover:bg-white transition-colors">Mag ik stemmen?</a>
+                    <a href="#socials" class="hover:text-bij1-yellow transition-colors font-medium">Contact</a>
+                </div>
 
-          <h1>Gelijke stad, gelijke standaard:<br>resultaat in uitvoering</h1>
-
-          <div class="subhead">Fabian Vroom – BIJ1, Kandidaat Stadsdeelcommissie Amsterdam Zuidoost</div>
-
-          <div class="meta-row" aria-label="meta">
-            <span class="tag dark">Verkiezingen 18 maart 2026</span>
-            <span class="tag">Zuidoost</span>
-            <span class="tag">#3</span>
-            <span class="tag">BIJ1</span>
-          </div>
-
-          <nav class="toc" aria-label="Snel naar">
-            <a href="#basis">De basis</a>
-            <a href="#kompas">Mijn kompas</a>
-            <a href="#plan">Mijn plan</a>
-            <a href="#waarom">Waarom BIJ1</a>
-            <a href="#afsluiter">Afsluiter</a>
-          </nav>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-bij1-yellow focus:outline-none p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
         </div>
 
-        <aside class="hero-photo" aria-label="Portret">
-          <div class="photo-frame">
-            <img src="assets/portret.png" alt="Portret van Fabian Vroom" loading="eager">
-          </div>
-          </div>
-       </aside>
-      </div>
-    </header>
-
-    <main id="inhoud" class="content">
-      <section class="basis" aria-labelledby="basis">
-        <h2 id="basis">De basis</h2>
-        <p><strong>Mijn naam is Fabian Vroom.</strong> Als trambestuurder bij GVB zie ik de stad door de ogen van reizigers. Ik zie waar het werkt en waar mensen vastlopen: op het perron, in de wijken, onderweg naar school, werk of zorg.</p>
-        <p>Binnen GVB zet ik die blik om in actie als voorzitter van het personeelsinitiatief <em>Keti Koti Verbindt</em>. Daar bouwen we aan historische kennis en sociale veiligheid op de werkvloer. Mijn principe is simpel: <strong>luisteren is de start, uitvoeren de norm.</strong></p>
-      </section>
-
-      <section class="kompas" aria-labelledby="kompas">
-        <h2 id="kompas">Mijn kompas</h2>
-
-        <p><strong>Bestaanszekerheid is geen theorie, het is ervaring.</strong></p>
-
-        <h3>2010–2018: leven zonder zekerheid</h3>
-        <p>Sinds mijn 23e woon ik in Amsterdam Zuidoost, na mijn komst vanuit Suriname. Ik weet hoe snel bestaanszekerheid kan wankelen. Door verkeerde keuzes raakte ik in 2010 mijn woning kwijt.</p>
-
-        <p>Twee jaar lang sliep ik op banken in de woonkamer bij anderen. Daarna huurde ik zes jaar in onderhuur. Zonder zekerheid. Met telkens dezelfde vraag: <em>waar slaap ik volgende maand?</em></p>
-
-        <p>Ik zag in die periode hoe oude Surinaamse vrienden drugs verkochten in het centrum van Amsterdam. Ik voelde hoe dun die lijn is en besefte hoe makkelijk ik zelf een verkeerde afslag had kunnen nemen. Toch bleef ik vechten: ik klopte aan bij uitzendbureaus en pakte het werk dat ik kon vinden.</p>
-
-        <h3>Waarom politiek: zekerheid, kansen, zeggenschap</h3>
-        <p>In 2018 kreeg ik weer een woning op mijn naam. Dat gaf rust en ruimte. In 2023 werd ons zoontje geboren. Als vader zie ik de potentie van onze wijken én de gaten in onze voorzieningen.</p>
-
-        <p>Mijn eigen geschiedenis heeft mij geleerd hoe belangrijk zekerheid, kansen en steun zijn. Daarom ga ik de politiek in vanuit noodzaak: voor echte bestaanszekerheid, perspectief voor jongeren, meer zeggenschap voor bewoners en buurten die veilig zijn, met vertrouwen als basis.</p>
-      </section>
-
-      <section class="wide" aria-labelledby="plan">
-        <h2 id="plan">Mijn plan: drie concrete toezeggingen</h2>
-
-        <div class="plan-grid">
-          <article class="plan-item">
-            <h3><span class="badge">1</span> Jongeren: fysieke ruimte en woonrecht</h3>
-            <div class="plan-subhead">Jongeren hebben recht op hun plek.</div>
-            <div class="plan-detail">
-              <p><strong>Sport:</strong> ik ga voor hoogwaardige, openbare sportplekken: veilig, goed verlicht tot 22.00 uur en 24/7 toegankelijk voor iedereen. Met duidelijk beheer in de wijk, zodat het schoon, heel en veilig blijft.</p>
-              <p><strong>Wonen:</strong> jongeren en starters uit Amsterdam Zuidoost moeten hier kunnen blijven. Ik zet maximale druk op bouwplannen in Amsterdam Zuidoost: reserveer ruimte voor minimaal 500 betaalbare woningen, met afspraken die bewoners uit Amsterdam Zuidoost echt helpen. <em>Een thuis is een recht.</em></p>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="md:hidden bg-bij1-dark border-t border-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-base font-medium text-white hover:text-bij1-yellow border-b border-gray-700">Home</a>
+                <a href="#over-mij" class="block px-3 py-2 text-base font-medium text-white hover:text-bij1-yellow border-b border-gray-700">Over Mij</a>
+                <a href="#pijlers" class="block px-3 py-2 text-base font-medium text-white hover:text-bij1-yellow border-b border-gray-700">Standpunten</a>
+                <a href="#steminfo" class="block px-3 py-2 text-base font-medium text-bij1-yellow border-b border-gray-700">Check Stemrecht</a>
+                <a href="#socials" class="block px-3 py-2 text-base font-medium text-white hover:text-bij1-yellow">Social Media</a>
             </div>
-          </article>
-
-          <article class="plan-item">
-            <h3><span class="badge">2</span> Buurthuizen: essentiële infrastructuur</h3>
-            <div class="plan-subhead">Buurthuizen zijn sociale infrastructuur, net zo noodzakelijk als wegen en verlichting. Huiswerkbegeleiding, sport en ontmoeting maken de wijk veiliger.</div>
-            <div class="plan-detail">
-              <p><strong>Status:</strong> definieer buurthuizen als basisvoorziening, met structurele financiering.</p>
-              <p><strong>Toegang:</strong> open tot 22.00 uur, zeven dagen per week.</p>
-              <p><strong>Inhoud:</strong> bewoners en lokale initiatieven bepalen de programmering. Wij borgen continuïteit.</p>
-            </div>
-          </article>
-
-          <article class="plan-item">
-            <h3><span class="badge">3</span> Zeggenschap: meetbaar resultaat</h3>
-            <div class="plan-subhead">Kansen mogen niet afhangen van je postcode.</div>
-            <div class="plan-detail">
-              <p><strong>Kwaliteit:</strong> ik wil meetbare normen voor onderhoud en veiligheid in de openbare ruimte. We sturen op data én op wat bewoners melden, met preventief onderhoud.</p>
-              <p><strong>Budget:</strong> een wijkbudget van € 50.000 per jaar met mandaat. Bewoners beslissen zelfstandig over de besteding in hun eigen straat. Dit is eigenaarschap in de praktijk.</p>
-            </div>
-          </article>
         </div>
-      </section>
+    </nav>
 
-      <section class="waarom" aria-labelledby="waarom">
-        <h2 id="waarom">Waarom BIJ1</h2>
-        <p>BIJ1 staat voor radicale gelijkwaardigheid. Wij handelen nu, hier, in Amsterdam Zuidoost. Kansen en veiligheid zijn een recht.</p>
-        <p>Ik kies voor politiek van de uitvoering. Dicht op de wijk. Met duidelijke keuzes.</p>
-      </section>
+    <!-- Hero Section -->
+    <!-- FIX: Padding bottom (pb) verhoogd van 32 naar 56 om afsnijden te voorkomen -->
+    <section id="home" class="relative bg-bij1-black text-white pt-32 pb-56 lg:pt-48 lg:pb-40 clip-diagonal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span class="inline-block bg-bij1-yellow text-bij1-black font-black px-3 py-1 text-sm uppercase tracking-wide transform -skew-x-12 shadow-[2px_2px_0px_0px_rgba(255,255,255,0.5)]">
+                            Zuidoost #3
+                        </span>
+                        <span class="inline-block border-2 border-white text-white font-black px-3 py-1 text-sm uppercase tracking-wide transform -skew-x-12">
+                            Gemeente #12
+                        </span>
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6">
+                        Gelijke stad,<br>
+                        <span class="text-bij1-yellow">gelijke standaard.</span>
+                    </h1>
+                    
+                    <p class="text-xl text-gray-300 mb-8 max-w-lg leading-relaxed">
+                        Zuidoost telt mee. Resultaat in uitvoering dat je kunt controleren. Stem voor bestaanszekerheid, niet voor theorie.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#pijlers" class="text-center px-8 py-3 bg-white text-bij1-black font-bold rounded hover:bg-gray-200 transition-all shadow-[4px_4px_0px_0px_rgba(252,225,22,1)] hover:translate-y-1 hover:shadow-none">
+                            Mijn Plannen
+                        </a>
+                        <a href="#steminfo" class="text-center px-8 py-3 border-2 border-white text-white font-bold rounded hover:bg-white hover:text-bij1-black transition-all">
+                            Check je stemrecht
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Foto Sectie -->
+                <div class="order-1 md:order-2 relative h-96 w-full flex items-center justify-center">
+                    <div class="relative w-full h-full rounded-lg overflow-hidden border-4 border-bij1-yellow shadow-2xl bg-gray-800">
+                        <!-- Hier linken we naar de geüploade foto in de assets map -->
+                        <!-- Zorg dat je de foto hernoemt naar 'fabian.jpg' in de assets map, of pas de naam hieronder aan -->
+                        <img src="./assets/1000437983.jpg" alt="Fabian Vroom Schets" class="w-full h-full object-cover object-top">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <div id="afsluiter" class="handtekening" aria-label="ondertekening">
-        <div>Stem voor resultaat.</div>
-        <div class="lijn">Fabian Vroom <span class="pill">#3</span> | Lijst BIJ1 | Amsterdam Zuidoost</div>
-      </div>
-
-      <a class="cta" href="https://wa.me/31619299232?text=Hoi%20Fabian,%20ik%20zag%20je%20pagina%20en%20heb%20een%20vraag%20over%20Amsterdam%20Zuidoost.">✓ Stel je vraag</a>
-
-      <footer>‹ resultaat in uitvoering › · Amsterdam Zuidoost verdient actie</footer>
-    </main>
-  </div>
-
-  <div class="sticky-cta" aria-label="Contact">
-    <div class="sticky-cta__inner">
-      <a class="sticky-cta__btn" href="https://wa.me/31619299232?text=Hoi%20Fabian,%20ik%20zag%20je%20pagina%20en%20heb%20een%20vraag%20over%20Amsterdam%20Zuidoost.">✓ Stel je vraag via WhatsApp</a>
+    <!-- Quote Banner -->
+    <div class="bg-bij1-yellow py-8 border-b-4 border-black">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-xl md:text-2xl font-bold text-bij1-black italic">
+                "Luisteren is de start, uitvoeren de norm."
+            </p>
+        </div>
     </div>
-  </div>
+
+    <!-- Over Mij Section -->
+    <section id="over-mij" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-3xl font-black text-bij1-black uppercase mb-4">Mijn Kompas</h2>
+                <div class="w-24 h-2 bg-bij1-yellow mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <div class="prose prose-lg text-gray-800">
+                    <p class="font-bold text-xl mb-4">
+                        Mijn naam is Fabian Vroom. Als trambestuurder bij GVB zie ik de stad door de ogen van reizigers.
+                    </p>
+                    <p class="mb-4">
+                        Ik zie waar het goed gaat en waar mensen vastlopen. Binnen GVB zet ik die blik om in actie als voorzitter van Keti Koti Verbindt. 
+                    </p>
+                    <p class="mb-4">
+                        <strong>Van dakloosheid naar veerkracht:</strong> Sinds mijn 23e woon ik in Zuidoost. Ik weet hoe snel bestaanszekerheid kan wankelen. In 2010 raakte ik mijn woning kwijt en sliep twee jaar lang op banken bij anderen.
+                    </p>
+                    <p>
+                        Die ervaring is mijn drive. Ik zit niet in de politiek voor de theorie, maar uit noodzaak.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-xl border-l-8 border-bij1-black">
+                    <h3 class="text-xl font-black mb-6 uppercase tracking-wide border-b pb-2">Mijn 3 Ankerzinnen</h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-bij1-yellow mt-1 mr-4 text-2xl"></i>
+                            <span class="font-medium text-lg">We luisteren, we erkennen, we herstellen.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-bij1-yellow mt-1 mr-4 text-2xl"></i>
+                            <span class="font-medium text-lg">Geen woorden, maar uitvoering.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-bij1-yellow mt-1 mr-4 text-2xl"></i>
+                            <span class="font-medium text-lg">Bestaanszekerheid is geen theorie, het is ervaring.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIJLERS SECTIE -->
+    <section id="pijlers" class="py-24 bg-bij1-black text-white relative">
+        <div class="absolute top-0 left-0 w-full h-24 bg-gray-50 clip-diagonal bg-white"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-bij1-yellow font-bold tracking-widest uppercase text-sm">Mijn Plan</span>
+                <h2 class="text-4xl md:text-5xl font-black mt-2">3 Concrete Toezeggingen</h2>
+                <p class="mt-4 text-gray-400 max-w-2xl mx-auto text-lg">Geen vage beloftes. Dit is waar ik me hard voor maak in de commissie.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Pijler 1 -->
+                <div class="bg-gray-900 rounded-xl overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300 shadow-2xl border-t-4 border-bij1-yellow group">
+                    <div class="p-8">
+                        <div class="h-16 w-16 bg-bij1-yellow rounded-lg flex items-center justify-center mb-6 text-bij1-black text-3xl group-hover:bg-white transition-colors">
+                            <i class="fas fa-basketball-ball"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">1. Jongeren & Wonen</h3>
+                        <p class="text-gray-400 mb-6">Jongeren hebben recht op hun plek. Ruimte om te groeien en woonrecht om te blijven.</p>
+                        <div class="space-y-4">
+                            <div class="bg-gray-800 p-4 rounded border-l-2 border-bij1-yellow">
+                                <h4 class="font-bold text-white mb-1">Sport tot 22:00</h4>
+                                <p class="text-sm text-gray-400">Hoogwaardige openbare sportplekken, goed verlicht.</p>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded border-l-2 border-bij1-yellow">
+                                <h4 class="font-bold text-white mb-1">25% Voorrang</h4>
+                                <p class="text-sm text-gray-400">Negatief advies bij bouwplannen zonder harde 25% voorrang voor Zuidoost.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pijler 2 -->
+                <div class="bg-gray-900 rounded-xl overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300 shadow-2xl border-t-4 border-white group">
+                    <div class="p-8">
+                        <div class="h-16 w-16 bg-white rounded-lg flex items-center justify-center mb-6 text-bij1-black text-3xl group-hover:bg-bij1-yellow transition-colors">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">2. Sociale Infrastructuur</h3>
+                        <p class="text-gray-400 mb-6">Buurthuizen zijn geen luxe, maar noodzaak. Net als wegen en verlichting.</p>
+                        <div class="space-y-4">
+                            <div class="bg-gray-800 p-4 rounded border-l-2 border-white">
+                                <h4 class="font-bold text-white mb-1">7 Dagen Open</h4>
+                                <p class="text-sm text-gray-400">Leegstand in de avond is kapitaalvernietiging. Open tot 22:00.</p>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded border-l-2 border-white">
+                                <h4 class="font-bold text-white mb-1">Programmering</h4>
+                                <p class="text-sm text-gray-400">Bewoners bepalen. Gemeente zorgt voor stenen en licht.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pijler 3 -->
+                <div class="bg-gray-900 rounded-xl overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300 shadow-2xl border-t-4 border-bij1-yellow group">
+                    <div class="p-8">
+                        <div class="h-16 w-16 bg-bij1-yellow rounded-lg flex items-center justify-center mb-6 text-bij1-black text-3xl group-hover:bg-white transition-colors">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">3. Echte Zeggenschap</h3>
+                        <p class="text-gray-400 mb-6">Kansen mogen niet afhangen van je postcode. Eigenaarschap in de praktijk.</p>
+                        <div class="space-y-4">
+                            <div class="bg-gray-800 p-4 rounded border-l-2 border-bij1-yellow">
+                                <h4 class="font-bold text-white mb-1">Wijkbudget €50k</h4>
+                                <p class="text-sm text-gray-400">Met direct mandaat voor bewoners. Geen consultants.</p>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded border-l-2 border-bij1-yellow">
+                                <h4 class="font-bold text-white mb-1">Meetbaar Onderhoud</h4>
+                                <p class="text-sm text-gray-400">Gelijkheid is een uitkomst: tegels recht, straten schoon.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <p class="text-2xl font-bold italic font-serif">"De buurt is geen decor. De buurt is de opdrachtgever."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- STEMRECHT SECTIE -->
+    <section id="steminfo" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-sm font-bold uppercase tracking-widest text-gray-500">Verkiezingen 18 Maart 2026</span>
+                <h2 class="text-4xl font-black text-bij1-black uppercase mt-2">Mag jij stemmen?</h2>
+                <p class="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">Jouw stem telt op twee plekken. Controleer hier of je mag stemmen.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                
+                <!-- CARD 1: STADSDEELCOMMISSIE -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-transparent hover:border-bij1-yellow transition-all flex flex-col h-full">
+                    <div class="bg-bij1-yellow p-6 relative overflow-hidden">
+                        <div class="absolute right-0 top-0 opacity-10 transform translate-x-1/4 -translate-y-1/4">
+                            <i class="fas fa-map-marker-alt text-9xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-bij1-black uppercase relative z-10">Stadsdeelcommissie</h3>
+                        <p class="font-bold text-bij1-black opacity-80 relative z-10">Amsterdam Zuidoost</p>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <div class="flex items-center justify-between mb-8 border-b border-gray-100 pb-6">
+                            <div>
+                                <p class="text-sm uppercase tracking-wide text-gray-500 font-bold">Kandidaat</p>
+                                <p class="text-xl font-bold">Fabian Vroom</p>
+                            </div>
+                            <div class="h-16 w-16 bg-bij1-black text-bij1-yellow rounded-full flex items-center justify-center text-3xl font-black shadow-lg">
+                                3
+                            </div>
+                        </div>
+                        
+                        <p class="font-bold mb-4">Wanneer mag je stemmen?</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <div class="w-6 mt-1 flex-shrink-0"><i class="fas fa-check text-green-600"></i></div>
+                                <span><strong>Leeftijd:</strong> 16 jaar of ouder</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-6 mt-1 flex-shrink-0"><i class="fas fa-check text-green-600"></i></div>
+                                <span><strong>Nationaliteit:</strong> NL of EU</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-6 mt-1 flex-shrink-0"><i class="fas fa-check text-green-600"></i></div>
+                                <span><strong>Geen EU?</strong> 2 jaar onafgebroken ingeschreven in NL</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CARD 2: GEMEENTERAAD -->
+                <div class="bg-bij1-black rounded-xl shadow-lg overflow-hidden text-white border-2 border-transparent hover:border-gray-600 transition-all flex flex-col h-full">
+                    <div class="bg-gray-800 p-6 border-b border-gray-700 relative overflow-hidden">
+                         <div class="absolute right-0 top-0 opacity-10 transform translate-x-1/4 -translate-y-1/4">
+                            <i class="fas fa-university text-9xl text-white"></i>
+                        </div>
+                        <div class="flex justify-between items-center relative z-10">
+                            <div>
+                                <h3 class="text-2xl font-black text-white uppercase">Gemeenteraad</h3>
+                                <p class="font-bold text-gray-400">Gemeente Amsterdam</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="block text-xs uppercase text-bij1-yellow font-bold">Lijst</span>
+                                <span class="text-3xl font-black text-bij1-yellow">5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <div class="flex items-center justify-between mb-8 border-b border-gray-700 pb-6">
+                            <div>
+                                <p class="text-sm uppercase tracking-wide text-gray-400 font-bold">Kandidaat</p>
+                                <p class="text-xl font-bold">Fabian Vroom</p>
+                            </div>
+                            <div class="h-16 w-16 bg-white text-bij1-black rounded-full flex items-center justify-center text-3xl font-black shadow-lg">
+                                12
+                            </div>
+                        </div>
+
+                        <p class="font-bold mb-4 text-bij1-yellow">Wanneer mag je stemmen?</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <div class="w-6 mt-1 flex-shrink-0"><i class="fas fa-check text-bij1-yellow"></i></div>
+                                <span><strong>Leeftijd:</strong> 18 jaar of ouder</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-6 mt-1 flex-shrink-0"><i class="fas fa-check text-bij1-yellow"></i></div>
+                                <span><strong>Nationaliteit:</strong> NL of EU</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-6 mt-1 flex-shrink-0"><i class="fas fa-check text-bij1-yellow"></i></div>
+                                <span><strong>Geen EU?</strong> 5 jaar onafgebroken ingeschreven in NL</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center bg-white p-6 rounded-lg shadow-sm border border-gray-200 max-w-xl mx-auto">
+                <p class="font-bold text-lg mb-1"><i class="far fa-calendar-check text-bij1-black mr-2"></i>Verkiezingsdag: 18 Maart 2026</p>
+                <p class="text-sm text-gray-500">Neem je stempas en ID-bewijs mee.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Q&A Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-black text-bij1-black">Scherp op de Inhoud</h2>
+            </div>
+            
+            <div class="space-y-6">
+                <!-- Q1 -->
+                <div class="border-l-4 border-bij1-yellow bg-gray-50 p-8 rounded-r-lg hover:bg-gray-100 transition-colors">
+                    <p class="font-bold text-lg mb-3 text-gray-800">"U bent tegen racisme. Hoe gaat u dat controleren?"</p>
+                    <p class="text-gray-700 italic leading-relaxed">
+                        "Door te sturen op data, meldingen en ervaringen. Als wij zien dat handhaving in bepaalde wijken disproportioneel vaak optreedt, of onderhoudsbudgetten ongelijk verdeeld worden, kaarten we dat aan. <br><br><span class="font-bold not-italic text-black bg-bij1-yellow px-1">Gelijkheid is geen slogan. Gelijkheid is een uitkomst.</span>"
+                    </p>
+                </div>
+                <!-- Q2 -->
+                <div class="border-l-4 border-bij1-black bg-gray-50 p-8 rounded-r-lg hover:bg-gray-100 transition-colors">
+                    <p class="font-bold text-lg mb-3 text-gray-800">"Is die 25% voorrang voor bewoners geen loze dreiging?"</p>
+                    <p class="text-gray-700 italic leading-relaxed">
+                        "Ik beloof geen veto, ik beloof een heldere lijn: zonder harde afspraak over die 25% is mijn advies nee. <br><br><span class="font-bold not-italic text-black">Als je altijd ‘misschien’ zegt, krijg je vaak ‘niets’.</span>"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section id="socials" class="py-16 bg-bij1-yellow text-bij1-black">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-black mb-2">Volg de Campagne</h2>
+            <p class="font-medium mb-10 text-lg">Stel je vragen, deel je ideeën of stuur me een bericht.</p>
+            
+            <div class="flex flex-wrap justify-center gap-6 md:gap-12">
+                <!-- Instagram -->
+                <a href="https://instagram.com/JOUW_GEBRUIKERSNAAM" target="_blank" aria-label="Volg Fabian op Instagram" class="group flex flex-col items-center">
+                    <div class="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center text-3xl group-hover:scale-110 group-hover:bg-white group-hover:text-black transition-all duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <span class="mt-2 font-bold group-hover:underline">Instagram</span>
+                </a>
+                
+                <!-- Facebook -->
+                <a href="https://facebook.com/JOUW_NAAM" target="_blank" aria-label="Volg Fabian op Facebook" class="group flex flex-col items-center">
+                    <div class="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center text-3xl group-hover:scale-110 group-hover:bg-white group-hover:text-black transition-all duration-300">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <span class="mt-2 font-bold group-hover:underline">Facebook</span>
+                </a>
+                
+                <!-- LinkedIn -->
+                <a href="https://linkedin.com/in/JOUW_NAAM" target="_blank" aria-label="Volg Fabian op LinkedIn" class="group flex flex-col items-center">
+                    <div class="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center text-3xl group-hover:scale-110 group-hover:bg-white group-hover:text-black transition-all duration-300">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <span class="mt-2 font-bold group-hover:underline">LinkedIn</span>
+                </a>
+
+                <!-- TikTok -->
+                <a href="https://tiktok.com/@JOUW_NAAM" target="_blank" aria-label="Volg Fabian op TikTok" class="group flex flex-col items-center">
+                    <div class="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center text-3xl group-hover:scale-110 group-hover:bg-white group-hover:text-black transition-all duration-300">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                    <span class="mt-2 font-bold group-hover:underline">TikTok</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-bij1-dark text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8 text-sm">
+            <div>
+                <h4 class="text-white font-bold text-lg mb-4">Fabian Vroom</h4>
+                <p>Kandidaat Stadsdeelcommissie<br>Amsterdam Zuidoost</p>
+                <div class="mt-4 flex flex-col gap-2">
+                    <span class="inline-flex items-center text-white"><span class="w-24 text-bij1-yellow font-bold">Zuidoost</span> #3</span>
+                    <span class="inline-flex items-center text-white"><span class="w-24 text-gray-400 font-bold">Gemeente</span> #12</span>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-lg mb-4">Verkiezingen</h4>
+                <p><i class="far fa-calendar-alt mr-2"></i>18 maart 2026</p>
+                <p class="mt-2">Stem voor resultaat.<br>Stem voor uitvoering.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-lg mb-4">Contact</h4>
+                <a href="mailto:campagne@fabianvroom.nl" class="text-bij1-yellow hover:underline mt-2 inline-block">campagne@fabianvroom.nl</a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-gray-800 text-center text-xs text-gray-600">
+            &copy; 2026 Campagneteam Fabian Vroom. Alle rechten voorbehouden.
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
+
+
